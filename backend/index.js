@@ -20,13 +20,12 @@ app.use(express.json());
 mongoose.connect("mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/", {
     useNewURLParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
   },6000000)
 
   .then(console.log("connected to server"))
   .catch((err) => console.log(err));
 
-  
+
 app.get('/', (req,res) => {
     res.json("Hello");
 })
