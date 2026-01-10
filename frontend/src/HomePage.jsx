@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
 import './App.css';
 import bg from './assets/bg.webp';
-import Header from './components/Header';
 import HomeComponent from './components/Home';
 import LazySection from './components/LazySections';
 
@@ -23,7 +22,6 @@ function HomePage() {
       />
 
       <div className="content">
-        <Header />
 
         <section id="home">
           <HomeComponent />
