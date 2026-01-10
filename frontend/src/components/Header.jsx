@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src={bg} alt="Logo" loading="lazy" style={{width: "50px", height:"50px"}}/>
+        <h2>AD</h2>
       </div>
 
       <nav className={`nav ${open ? "open" : ""}`}>
