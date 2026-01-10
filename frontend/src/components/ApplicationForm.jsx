@@ -18,19 +18,31 @@ const initialState = {
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState(initialState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    await axios.post('https://ativerse-3-0.vercel.app/addParticipants', formData)
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+    try {
+      const res = await axios.post(
+        "https://ativerse-3-0.vercel.app/addParticipants",
+        formData
+      );
+      console.log(res);
 
-    localStorage.setItem("applicationForm", JSON.stringify(formData));
-    alert("Application submitted successfully!");
-    setFormData(initialState);
+      localStorage.setItem("applicationForm", JSON.stringify(formData));
+      alert("Application submitted successfully!");
+      setFormData(initialState);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,7 +100,16 @@ const ApplicationForm = () => {
           </div>
         </div>
 
-        <button type="submit" className="submit-btn">Register</button>
+        <button type="submit" className="submit-btn" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <span className="loader"></span> Submitting
+            </>
+          ) : (
+            "Register"
+          )}
+        </button>
+
       </form>
     </section>
   );
