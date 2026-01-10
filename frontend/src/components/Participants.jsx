@@ -5,7 +5,7 @@ const Participants = () => {
   const [participants, setParticipants] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/participants")
+    fetch("https://ativerse-3-0.vercel.app/participants")
       .then(res => res.json())
       .then(data => setParticipants(data))
       .catch(() => setParticipants([]));

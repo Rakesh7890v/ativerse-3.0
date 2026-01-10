@@ -24,7 +24,7 @@ const ApplicationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post('http://localhost:5000/addParticipants', formData)
+    await axios.post('https://ativerse-3-0.vercel.app/addParticipants', formData)
     .then(res => console.log(res))
     .catch(err => console.log(err));
 

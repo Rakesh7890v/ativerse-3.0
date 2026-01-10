@@ -14,18 +14,13 @@ const Footer = () => {
           <p>Gokulnath</p>
           <span>8974893434</span>
           <h3>Student Coordinator's</h3>
-          <p>Rakesh V</p>
+          <p>Lokeshwaran S</p>
           <span>8608615266</span>
           <p>Sudharshana</p>
           <span>9794834743</span>
         </div>
       </div>
 
-      <footer className="footer">
-        <a href="https://www.linkedin.com/in/rakeshrishi/" target="_blank">
-            Developed by <span>Rakesh V</span>
-        </a>
-      </footer>
     </section>
   );
 };
