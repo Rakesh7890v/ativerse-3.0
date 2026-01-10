@@ -7,7 +7,7 @@ const ParticipantsModel = require('./models/Participants');
 const app = express();
 const port = 5000;
 app.use(cors({
-    origin: 'https://ativerse-3-0-hackathon.vercel.app/',
+    origin: 'https://ativerse-3-0-hackathon.vercel.app',
     methods: 'GET,POST,PUT',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true
