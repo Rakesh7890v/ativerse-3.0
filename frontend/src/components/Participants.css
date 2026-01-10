@@ -12,6 +12,30 @@
   color: #e6f1ff;
 }
 
+.participants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #00ffe0, #00bcd4);
+  color: #001a1a;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 224, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 255, 224, 0.7);
+}
+
 .participants-title {
   text-align: center;
   font-size: 2.4rem;

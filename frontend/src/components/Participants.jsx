@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import * as XLSX from "xlsx";
 import "./Participants.css";
 
 const Participants = () => {
@@ -11,14 +12,43 @@ const Participants = () => {
       .catch(() => setParticipants([]));
   }, []);
 
+  // 📥 Excel download function
+  const downloadExcel = () => {
+    const dataForExcel = participants.map((p, i) => ({
+      "S.No": i + 1,
+      "Team Name": p.teamName,
+      "Member 1 Name": p.member1Name,
+      "Member 1 Email": p.member1Email,
+      "Member 1 Phone": p.member1Phone,
+      "Member 2 Name": p.member2Name,
+      "Member 2 Email": p.member2Email,
+      "Member 2 Phone": p.member2Phone,
+      "Member 3 Name": p.member3Name,
+      "Member 3 Email": p.member3Email,
+      "Member 3 Phone": p.member3Phone,
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(dataForExcel);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Participants");
+
+    XLSX.writeFile(workbook, "ARTIVERSE_3.0_Participants.xlsx");
+  };
+
   return (
     <div className="participants-container">
-      <h1 className="participants-title">ARTIVERSE 3.0 PARTICIPANTS</h1>
+      <div className="participants-header">
+        <h1 className="participants-title">ARTIVERSE 3.0 PARTICIPANTS</h1>
+        <button className="download-btn" onClick={downloadExcel}>
+          ⬇ Download
+        </button>
+      </div>
 
       <div className="table-wrapper">
         <table className="participants-table">
           <thead>
             <tr>
+              <th>S.No</th>
               <th>Team Name</th>
               <th>Member 1</th>
               <th>Email</th>
@@ -34,6 +64,7 @@ const Participants = () => {
           <tbody>
             {participants.map((p, i) => (
               <tr key={i}>
+                <td>{i + 1}</td>
                 <td>{p.teamName}</td>
                 <td>{p.member1Name}</td>
                 <td>{p.member1Email}</td>
