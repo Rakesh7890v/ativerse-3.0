@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Countdown.css';
+import './CountDown.css';
 
 const CountdownTimer = () => {
   const targetDate = new Date('2026-02-06T10:00:00').getTime();
