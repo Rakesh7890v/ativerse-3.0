@@ -17,9 +17,23 @@ app.use(bodyParser.json({limit : '50mb'}));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/", {},6000000)
-  .then(console.log("connected to server"))
-  .catch((err) => console.log(err));
+mongoose.connect(
+  process.env.MONGO_URL || "mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 10000,
+  }
+)
+.then(() => {
+  console.log("MongoDB connected successfully");
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+})
+.catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
 
 
 app.get('/', (req,res) => {
@@ -58,9 +72,4 @@ app.get('/participants', (req, res) => {
             console.error(err);
             res.status(500).json({ error: 'An error occurred while fetching foods' });
         });
-});
-
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
 });
