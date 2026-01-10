@@ -17,10 +17,16 @@ app.use(bodyParser.json({limit : '50mb'}));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/")
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("Connection error", err));
+mongoose.connect("mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/", {
+    useNewURLParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  },6000000)
 
+  .then(console.log("connected to server"))
+  .catch((err) => console.log(err));
+
+  
 app.get('/', (req,res) => {
     res.json("Hello");
 })
