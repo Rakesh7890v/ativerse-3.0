@@ -57,12 +57,12 @@ const ApplicationForm = () => {
 
         <h2 className="form-step">Team Member 1</h2>
         <label>Name</label>
-        <input type="text" name="member1Name" placeholder="Rakesh" value={formData.member1Name} onChange={handleChange} autoComplete="off" />
+        <input type="text" name="member1Name" placeholder="Karthikeyan" value={formData.member1Name} onChange={handleChange} autoComplete="off" />
 
         <div className="form-row">
           <div>
             <label>Email</label>
-            <input type="email" name="member1Email" placeholder="rakesh@gmail.com" value={formData.member1Email} onChange={handleChange} autoComplete="off" />
+            <input type="email" name="member1Email" placeholder="karthi@gmail.com" value={formData.member1Email} onChange={handleChange} autoComplete="off" />
           </div>
           <div>
             <label>Phone</label>
