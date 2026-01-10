@@ -1,0 +1,144 @@
+.coordinators-section {
+  text-align: center;
+  font-family: monospace;
+  padding-bottom: 0px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #1de9b6;
+  text-shadow: 4px 2px 0 #00bcd4;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.coordinators-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coord-card {
+  max-width: fit-content;
+  background: #0b1220;
+  border: 2px solid #1de9b6;
+  padding: 26px 22px;
+  box-shadow: 6px 6px 0 #00bcd4;
+  transform: translate(-8px, -8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.coord-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 2px 2px 0 #00bcd4;
+  background: #101a30;
+}
+
+.coord-card h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #1de9b6;
+  text-shadow: 2px 1px 0 #00bcd4;
+  margin: 12px 0px;
+}
+
+.coord-card p {
+  font-size: 1.3rem;
+  margin: 6px 0;
+  font-weight: 500;
+  color: #e2e8f0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.coord-card span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #94a3b8;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 8px;
+}
+
+@keyframes artiverseFlow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer span {
+  margin-top: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    #0e6fe6,
+    #00bcd4,
+    #ffffff,
+    #00bcd4,
+    #0e6fe6
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: artiverseFlow 8s linear infinite;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .artiverse-text {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .coord-card {
+    padding: 20px 0px;
+    margin: 10px;
+    margin-left: 20px;
+  }
+
+  .coord-card h3 {
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+
+  .coord-card p {
+    line-height: 1.4;
+    font-size: 0.7rem;
+  }
+
+  .coord-card span {
+    line-height: 1.4;
+    font-size: 0.5rem;
+  }
+
+  .section-heading {
+    margin: 15px;
+    line-height: 1.4;
+  }
+
+  .footer a {
+    font-size: 0.9rem;
+  }
+
+  .footer span {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,162 @@
+.prizes-section {
+  padding: 60px 80px;
+  background: #050a16;
+  margin-top: 100px;
+}
+
+.prizes-heading {
+  font-size: 2rem;
+  color: #1de9b6;
+  text-shadow: 4px 2px 0 #00bcd4;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.prize-card {
+  background: #0b1220;
+  border: 2px solid #1de9b6;
+  padding: 22px 20px;
+  transform: translate(-10px, -10px);
+  box-shadow: 6px 6px 0 #00bcd4;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  text-align: center;
+}
+
+.prize-card img {
+  width: 80px;
+  height: auto;
+}
+
+.prize-card:hover {
+  background: #101a30;
+  transform: translate(-4px, -4px);
+  box-shadow: 2px 2px 0 #00bcd4;
+}
+
+.prize-rank {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1de9b6;
+  text-shadow: 2px 1px 0 #00bcd4;
+  text-transform: uppercase;
+}
+
+.prize-amount {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  font-family: monospace;
+}
+
+.prize-card.highlight {
+  border-color: #ff4dff;
+  box-shadow: 8px 8px 0 #ff4dff;
+}
+
+.prize-card.highlight:hover {
+  box-shadow: 3px 3px 0 #ff4dff;
+}
+
+@media (max-width: 768px) {
+  .prizes-section {
+    padding: 40px 24px;
+  }
+
+  .prizes-heading {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .prizes-grid {
+    gap: 20px;
+  }
+
+  .prize-card {
+    padding: 18px 16px;
+    transform: translate(-6px, -6px);
+    box-shadow: 4px 4px 0 #00bcd4;
+  }
+
+  .prize-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 2px 2px 0 #00bcd4;
+  }
+
+  .prize-card img {
+    width: 64px;
+  }
+
+  .prize-rank {
+    font-size: 1.2rem;
+  }
+
+  .prize-amount {
+    font-size: 1rem;
+  }
+
+  .prize-card.highlight {
+    box-shadow: 6px 6px 0 #ff4dff;
+  }
+
+  .prize-card.highlight:hover {
+    box-shadow: 3px 3px 0 #ff4dff;
+  }
+}
+
+@media (max-width: 480px) {
+  .prizes-section {
+    padding: 32px 16px;
+  }
+
+  .prizes-heading {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .prizes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .prize-card {
+    padding: 16px 14px;
+    transform: translate(-4px, -4px);
+    box-shadow: 3px 3px 0 #00bcd4;
+  }
+
+  .prize-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 1px 1px 0 #00bcd4;
+  }
+
+  .prize-card img {
+    width: 56px;
+  }
+
+  .prize-rank {
+    font-size: 1rem;
+  }
+
+  .prize-amount {
+    font-size: 0.9rem;
+  }
+
+  .prize-card.highlight {
+    box-shadow: 4px 4px 0 #ff4dff;
+  }
+
+  .prize-card.highlight:hover {
+    box-shadow: 2px 2px 0 #ff4dff;
+  }
+}
