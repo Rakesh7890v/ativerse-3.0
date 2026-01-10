@@ -18,22 +18,22 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.json());
 
 mongoose.connect(
-  process.env.MONGO_URL || "mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 10000,
-  }
-)
-.then(() => {
-  console.log("MongoDB connected successfully");
-  app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
-})
-.catch((err) => {
-  console.error("MongoDB connection error:", err);
-});
+    "mongodb+srv://rishirakesh587_db_user:P89GrZ3GatR6Cysa@artiverse.st1etfp.mongodb.net/",
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 10000,
+    }
+    )
+    .then(() => {
+        console.log("MongoDB connected successfully");
+        app.listen(port, () => {
+            console.log(`Server running on port ${port}`);
+        });
+    })
+    .catch((err) => {
+        console.error("MongoDB connection error:", err);
+    });
 
 
 app.get('/', (req,res) => {
