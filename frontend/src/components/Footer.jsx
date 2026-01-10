@@ -9,15 +9,15 @@ const Footer = () => {
         <div className="coord-card">
           <h3>Faculty Coordinator</h3>
           <p>Gayathri PG</p>
-          <span>893374289</span>
+          <span>9488103040</span>
           <h3>Secretary</h3>
           <p>Gokulnath</p>
-          <span>8974893434</span>
+          <span>7538820190</span>
           <h3>Student Coordinator's</h3>
           <p>Lokeshwaran S</p>
-          <span>8608615266</span>
-          <p>Sudharshana</p>
-          <span>9794834743</span>
+          <span>9345563341</span>
+          <p>Sudharshana R</p>
+          <span>8668119025</span>
         </div>
       </div>
 
