@@ -53,20 +53,20 @@ const ApplicationForm = () => {
       <form className="form-card" method="post" onSubmit={handleSubmit}>
         <h2 className="form-step">Team Details</h2>
         <label>Team Name *</label>
-        <input type="text" name="teamName" placeholder="Enter your team name" value={formData.teamName} required onChange={handleChange} autoComplete="off" />
+        <input required type="text" name="teamName" placeholder="Enter your team name" value={formData.teamName} required onChange={handleChange} autoComplete="off" />
 
-        <h2 className="form-step">Team Member 1</h2>
-        <label>Name</label>
-        <input type="text" name="member1Name" placeholder="Karthikeyan" value={formData.member1Name} onChange={handleChange} autoComplete="off" />
+        <h2 className="form-step">Team Member 1 *</h2>
+        <label>Name *</label>
+        <input required type="text" name="member1Name" placeholder="Karthikeyan" value={formData.member1Name} onChange={handleChange} autoComplete="off" />
 
         <div className="form-row">
           <div>
-            <label>Email</label>
-            <input type="email" name="member1Email" placeholder="karthi@gmail.com" value={formData.member1Email} onChange={handleChange} autoComplete="off" />
+            <label>Email *</label>
+            <input required type="email" name="member1Email" placeholder="karthi@gmail.com" value={formData.member1Email} onChange={handleChange} autoComplete="off" />
           </div>
           <div>
-            <label>Phone</label>
-            <input type="tel" name="member1Phone" placeholder="9362764721" value={formData.member1Phone} onChange={handleChange} maxLength="10" autoComplete="off" />
+            <label>Phone *</label>
+            <input required type="tel" name="member1Phone" placeholder="9362764721" value={formData.member1Phone} onChange={handleChange} maxLength="10" autoComplete="off" />
           </div>
         </div>
 
