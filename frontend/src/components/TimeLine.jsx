@@ -6,57 +6,57 @@ const Timeline = () => {
     {
       id: 1,
       title: 'Registration Starts',
-      date: '23/12/2025',
-      time: '',
-      status: 'completed'
-    },
-    {
-      id: 2,
-      title: 'Registration Ends',
-      date: '24/12/2025',
-      time: '',
-      status: 'completed'
-    },
-    {
-      id: 3,
-      title: 'Coding Assessment',
-      date: '01/01/2026 - First Year\n 30/1/2026 - Second & Third Year',
+      date: '20/1/2026',
       time: '',
       status: 'current'
     },
     {
+      id: 2,
+      title: 'Registration Ends',
+      date: '29/1/2026',
+      time: '',
+      status: 'pending'
+    },
+    {
+      id: 3,
+      title: 'Assessment',
+      date: '27/01/2026 - First Year\n 30/1/2026 - Second & Third Year',
+      time: '',
+      status: 'pending'
+    },
+    {
       id: 4,
-      title: 'Shortlisted Announcement',
-      date: '02/01/2026',
+      title: 'Result Announcement',
+      date: '02/02/2026',
       time: '',
       status: 'pending'
     },
     {
       id: 5,
       title: 'Hackathon Day 1',
-      date: '05/01/2026',
-      time: '',
+      date: '06/02/2026',
+      time: '10:00 AM',
       status: 'pending'
     },
     {
       id: 6,
       title: 'First Review',
-      date: '05/01/2026',
-      time: '1:00 PM',
+      date: '06/02/2026',
+      time: '3:00 PM',
       status: 'pending'
     },
     {
       id: 7,
       title: 'Second Review',
-      date: '05/01/2026',
-      time: '8:00 PM',
+      date: '06/02/2026',
+      time: '11:00 PM',
       status: 'pending'
     },
     {
       id: 8,
-      title: 'Hackathon Day 2',
-      date: '06/01/2026',
-      time: '',
+      title: 'Final Review',
+      date: '07/02/2026',
+      time: '10:00 AM',
       status: 'pending'
     }
   ];
