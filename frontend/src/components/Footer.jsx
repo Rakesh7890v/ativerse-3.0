@@ -11,12 +11,12 @@ const Footer = () => {
           <p>Gayathri PG</p>
           <span>9488103040</span>
           <h3>Secretary</h3>
-          <p>Gokulnath</p>
+          <p>Gokulnath M</p>
           <span>7538820190</span>
           <h3>Student Coordinator's</h3>
-          <p>Lokeshwaran S</p>
+          <p>Logeshwaran S</p>
           <span>9345563341</span>
-          <p>Sudharshana R</p>
+          <p>Sudharsana R</p>
           <span>8668119025</span>
         </div>
       </div>
