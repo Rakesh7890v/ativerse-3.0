@@ -21,6 +21,10 @@ const Footer = () => {
         </div>
       </div>
 
+      <div className="footer">
+        <a href="https://www.linkedin.com/in/kavin-s-15a43b31b/" target="_blank">Developed by <span>KAVIN</span></a>
+      </div>
+
     </section>
   );
 };

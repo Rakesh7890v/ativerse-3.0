@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Monitor, MapPin, Trophy } from "lucide-react";
+import { Monitor, MapPin, Trophy, Lightbulb } from "lucide-react";
 
 const HomeComponent = () => {
   return (
@@ -17,6 +17,11 @@ const HomeComponent = () => {
             <div className="info-item">
               <Monitor className="info-icon" />
               24 Hour Hackathon
+            </div>
+
+            <div className="info-item">
+              <Lightbulb className="info-icon" />
+              On-Spot Problem Statement
             </div>
 
             <div className="info-item">

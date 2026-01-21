@@ -2,7 +2,6 @@
   text-align: center;
   font-family: monospace;
   padding-bottom: 0px;
-  margin-bottom: 50px;
 }
 
 .section-heading {
@@ -42,7 +41,7 @@
   text-transform: uppercase;
   color: #1de9b6;
   text-shadow: 2px 1px 0 #00bcd4;
-  margin: 12px 0px;
+  margin: 12px;
 }
 
 .coord-card p {
@@ -70,6 +69,7 @@
     background-position: 400%;
   }
 }
+
 
 .footer a {
   text-decoration: none;

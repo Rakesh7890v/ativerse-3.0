@@ -20,7 +20,7 @@ const Timeline = () => {
     {
       id: 3,
       title: 'Assessment',
-      date: '27/01/2026 - First Year\n 30/1/2026 - Second & Third Year',
+      date: '27/01/2026 - First Year\n 31/1/2026 - Second & Third Year',
       time: '',
       status: 'pending'
     },
