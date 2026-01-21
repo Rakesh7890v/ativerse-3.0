@@ -6,7 +6,7 @@ const Timeline = () => {
     {
       id: 1,
       title: 'Registration Starts',
-      date: '20/1/2026',
+      date: '21/1/2026',
       time: '',
       status: 'current'
     },
