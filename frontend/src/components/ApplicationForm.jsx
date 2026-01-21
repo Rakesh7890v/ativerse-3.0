@@ -53,7 +53,7 @@ const ApplicationForm = () => {
       <form className="form-card" method="post" onSubmit={handleSubmit}>
         <h2 className="form-step">Team Details</h2>
         <label>Team Name *</label>
-        <input required type="text" name="teamName" placeholder="Enter your team name" value={formData.teamName} required onChange={handleChange} autoComplete="off" />
+        <input required type="text" name="teamName" placeholder="Enter your team name" value={formData.teamName} onChange={handleChange} autoComplete="off" />
 
         <h2 className="form-step">Team Member 1</h2>
         <label>Name *</label>
