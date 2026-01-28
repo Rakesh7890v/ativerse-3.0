@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 *{
+  cursor: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,6 +12,7 @@ html {
   -webkit-font-smoothing: none;
   font-smooth: never;
   image-rendering: pixelated;
+  cursor: url("/frontend/public/cursor.png") 16 16, auto !important;
 }
 body {
   margin: 0;
