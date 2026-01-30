@@ -4,6 +4,7 @@ import bg from './assets/bg.webp';
 import HomeComponent from './components/Home';
 import LazySection from './components/LazySections';
 import About from './components/About';
+import RegistrationClosed from './components/RegistrationClosed';
 
 const Timeline = lazy(() => import('./components/TimeLine'));
 const CountDown = lazy(() => import('./components/CountDown'));
@@ -56,7 +57,7 @@ function HomePage() {
 
           <section id="apply">
             <LazySection rootMargin="300px">
-              <ApplicationForm />
+              <RegistrationClosed />
             </LazySection>
           </section>
 

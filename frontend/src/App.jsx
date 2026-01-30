@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import HomeSkeleton from "./skeletons/HomeSkeleton";
 import ParticipantsSkeleton from "./skeletons/ParticipantsSkelton";
+import HackathonLaunch from "./components/HackathonLaunch";
 
 const HomePage = lazy(() => import("./HomePage"));
 const Participants = lazy(() => import("./components/Participants"));
@@ -18,6 +19,12 @@ function App() {
       <Route path="/admin_rakesh" element={
         <Suspense fallback={<ParticipantsSkeleton />}>
           <Participants />
+        </Suspense>
+      }/>
+
+      <Route path="/hackathon"element={
+        <Suspense fallback={<HomeSkeleton />}>
+          <HackathonLaunch />
         </Suspense>
       }/>
 

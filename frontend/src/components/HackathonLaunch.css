@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.hackathon-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  background: #0b1220;
+}
+.timer-start {
+  max-width: 90vw;
+  width: fit-content;
+  position: relative;
+  background: #0b1220;
+  border: 3px solid #1de9b6;
+  padding: 50px 60px;
+  text-align: center;
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 #00bcd4;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+.timer-start:hover {
+  background: #101a30;
+  transform: translate(-4px, -4px);
+  box-shadow: 2px 2px 0 #00bcd4;
+}
+
+.dot-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Initial Stage */
+.initial-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.launch-button {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.launch-button:hover {
+  transform: translateY(-2px);
+}
+
+.launch-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 0 30px rgba(236, 72, 153, 0.7),
+    0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Reveal Stage */
+.text-reveal-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.text-sequence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reveal-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ec4899;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  text-shadow: 
+    0 0 20px rgba(236, 72, 153, 0.8),
+    0 0 40px rgba(236, 72, 153, 0.5);
+}
+
+.reveal-text:last-child {
+  font-size: 5rem;
+  background: #ec4899;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Countdown Stage */
+.countdown-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.countdown-number {
+  font-size: 15rem;
+  font-weight: bold;
+  color: #ec4899;
+}
+
+/* Timer Stage */
+.timer-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireworks-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.fireworks-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timer-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.timer-title {
+  font-size: 2.5rem;
+  color: #1de9b6;
+  text-shadow: 4px 2px 0 #00bcd4;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background-color: #0b1220;
+  border: 8px solid #1de9b6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 10px 0 #00bcd4;
+}
+
+.time-value {
+  display: block;
+  color: #ff4dff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 3px 3px 0 #1de9b6;
+}
+
+.time-label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .launch-button {
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
+  }
+
+  .reveal-text {
+    font-size: 3rem;
+  }
+
+  .reveal-text:last-child {
+    font-size: 4rem;
+  }
+
+  .countdown-number {
+    font-size: 12rem;
+  }
+
+  .timer-title {
+    font-size: 2rem;
+  }
+
+  .time-box {
+    min-width: 150px;
+    padding: 1.5rem 2rem;
+  }
+
+  .time-value {
+    font-size: 4rem;
+  }
+
+  .time-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .launch-button {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .reveal-text {
+    font-size: 2rem;
+  }
+
+  .reveal-text:last-child {
+    font-size: 2.5rem;
+  }
+
+  .countdown-number {
+    font-size: 8rem;
+  }
+
+  .timer-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .timer-display {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .time-box {
+    min-width: 120px;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .time-value {
+    font-size: 3rem;
+  }
+
+  .time-label {
+    font-size: 0.7rem;
+  }
+
+  .timer-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .launch-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+  }
+
+  .reveal-text {
+    font-size: 1.5rem;
+  }
+
+  .reveal-text:last-child {
+    font-size: 2rem;
+  }
+
+  .countdown-number {
+    font-size: 6rem;
+  }
+
+  .timer-title {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+  }
+
+  .time-box {
+    min-width: 100px;
+    padding: 1rem;
+  }
+
+  .time-value {
+    font-size: 2.5rem;
+  }
+
+  .time-label {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+
+  .timer-content {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+}
+

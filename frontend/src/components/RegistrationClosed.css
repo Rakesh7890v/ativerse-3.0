@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.reg-closed-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.reg-closed-card {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, #050b18, #020617);
+  border: 3px solid #23f7e3;
+}
+
+.reg-closed-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 58px;
+  color: #1de9b6;
+  text-shadow: 2px 2px 0 #00bcd4;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.9;
+}
+
+@media (max-width: 968px) {
+    .reg-closed-title {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .reg-closed-title{
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 568px) {
+    .reg-closed-title{
+        font-size: 1.2rem;
+        padding: 2px;
+    }
+    .reg-closed-wrapper {
+        padding: 5px;
+    }
+    .reg-closed-card {
+        padding: 5px;
+    }
+}
+@media (max-width: 400px) {
+    .reg-closed-title{
+        font-size: 1rem;
+    }
+}

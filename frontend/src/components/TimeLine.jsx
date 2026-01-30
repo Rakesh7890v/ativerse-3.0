@@ -8,21 +8,21 @@ const Timeline = () => {
       title: 'Registration Starts',
       date: '21/1/2026',
       time: '',
-      status: 'current'
+      status: 'completed'
     },
     {
       id: 2,
       title: 'Registration Ends',
       date: '30/1/2026',
       time: '',
-      status: 'pending'
+      status: 'completed'
     },
     {
       id: 3,
       title: 'Assessment',
       date: '27/01/2026 - First Year\n 31/1/2026 - Second & Third Year',
       time: '',
-      status: 'pending'
+      status: 'current'
     },
     {
       id: 4,
