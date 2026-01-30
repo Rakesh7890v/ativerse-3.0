@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './HackathonLaunch.css';
-import bg from '../assets/bg.webp';
-import confetti from '../assets/confetti.webm'
+import confetti from '../assets/Confetti.webm'
 
 const HackathonLaunch = () => {
   const [stage, setStage] = useState('initial'); // initial, textReveal, countdown, timer
