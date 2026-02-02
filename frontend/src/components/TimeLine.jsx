@@ -22,14 +22,14 @@ const Timeline = () => {
       title: 'Assessment',
       date: '27/01/2026 - First Year\n 31/1/2026 - Second & Third Year',
       time: '',
-      status: 'current'
+      status: 'completed'
     },
     {
       id: 4,
       title: 'Result Announcement',
       date: '02/02/2026',
       time: '',
-      status: 'pending'
+      status: 'current'
     },
     {
       id: 5,
