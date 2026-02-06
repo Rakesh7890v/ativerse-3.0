@@ -202,7 +202,7 @@ const HackathonLaunch = () => {
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
                 <motion.h1 className="timer-title">
-                  HACKATHON STARTS IN
+                  HACKATHON ENDS IN
                 </motion.h1>
 
                 <div className="countdown-grid">
